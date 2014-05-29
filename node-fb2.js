@@ -1,8 +1,6 @@
 var Parser = require('./lib/parser.js');
-
-module.exports.parse = function(filepath, encoding, callback) {
-  var fb2
-    , result;
+module.exports.parse = function (filepath, encoding, callback) {
+  var fb2, result;
   if (typeof encoding == 'function') {
     fb2 = new Parser();
     // if arg is function then this callback and encoding is undefined
@@ -12,4 +10,4 @@ module.exports.parse = function(filepath, encoding, callback) {
     result = fb2.parse(filepath, callback);
   }
   return result;
-}
+};
